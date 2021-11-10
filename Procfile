@@ -1,1 +1,1 @@
-worker: python pybr2021/bot.py
+worker: python bot.py
