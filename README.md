@@ -17,7 +17,7 @@ $ poetry run python bot.py
 - `scibot!config reset-roles`: - Deleta roles criadas pelo bot.
 - `scibot!config reset-canais`: - Deleta canais criadas pelo bot.
 
-#### Agradecimentos
+#### Créditos
 
 Código totalmente baseado no bot do discord da Python Brasil.
 https://github.com/rougeth/pybr2021-discord-bot

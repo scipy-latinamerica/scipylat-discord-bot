@@ -7,8 +7,7 @@ import sentry_sdk
 import sys
 from decouple import config
 from discord.ext import commands
-from src.roles import ROLES, get_or_create_role, roles_msg
-from src.channels import CHANNELS, create_channel
+from src.conference import ROLES, CHANNELS, create_channel, get_or_create_role, roles_msg
 from src.icons import icon_check, icon_1, icon_2, icon_3, icon_time
 from src.helpers import get_destination
 
