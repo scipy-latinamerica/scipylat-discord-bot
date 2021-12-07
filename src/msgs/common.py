@@ -1,114 +1,75 @@
 auth_welcome = """
-**📝 Credenciamento da Python Brasil**
+**📝 Credenciamento da Scipy Latin America Conference 2021 📝**
 
-(pt-br) Clique no emoji abaixo para ativar o bot e confirmar a sua inscrição. O {0} vai te mandar uma mensagem no privado.
-(es) Haga clic en el EMOJI a continuación para activar el bot y confirme su solicitud. {0} te enviará un mensaje en el privado.
+(pt-br) Clique no emoji abaixo para ativar o bot e confirmar a sua inscrição. O nosso bot vai te mandar uma mensagem no privado. Basta seguir suas instruções por lá.
+(es) Haga clic en el EMOJI a continuación para activar el bot y confirme su solicitud. Nuestro bot le enviará un mensaje en el privado. Simplemente siga sus instrucciones allí.
 """
 
 auth_instructions = """Olá! Hola!
-(pt-br) Confirme a sua participação na Python Brasil 2021:
+(pt-br) Confirme a sua participação na Scipy Latin America Conference 2021:
 
-:warning: **Digite aquí o e-mail que você se inscreveu no EventBrite**
+:warning: **Digite aqui o e-mail que você se inscreveu no formulário de inscrição: **
 
-Caso você ainda não tenha se inscrito, registre-se em <https://bit.ly/pybr2021> antes de acessar este servidor.
+Caso você ainda não tenha se inscrito, registre-se em <https://conf.scipy.lat/forms/formulario-participante/> antes de acessar este servidor.
 ⎻⎻⎻
-(es) Confirme su participación en la Python Brasil 2021:
+(es) Confirme su participación en la Scipy Latin America Conference 2021:
 
-:warning: ** Colgue aquí el correo que ocupaste en el EventBrite**
+:warning: ** Colgue aquí el correo que ocupaste en el formulario de registro: **
 
-Si aún no te has registrado, hagalo en <https://bit.ly/pybr2021> antes de accesar este servidor.
+Si aún no te has registrado, hagalo en <https://conf.scipy.lat/forms/formulario-participante/> antes de accesar este servidor.
 """
 
-auth_already_confirmed = """🐍🎉
-(pt-br) Você já confirmou sua inscrição! **Aproveite a Python Brasil 2021!**
-(es) ¡Ya has confirmado tu registro! **Disfruta de Python Brasil 2021!**
+auth_already_confirmed = """
+(pt-br) Você já confirmou sua inscrição! **Aproveite a Scipy Latin America Conference 2021!** :beach: 🐍 :beach:
+(es) ¡Ya has confirmado tu registro! **Disfruta de Scipy Latin America Conference 2021!** :beach: 🐍 :beach:
 """
 
 auth_email_not_found = """❌
 ```
 {query}
 ```
-**pt-br**: Uhmm, não encontrei a sua inscrição. Quer tentar de novo? Nos informa apenas o **e-mail** usado no cadastro ou o **número de registro**.
+**pt-br**: Uhmm, não encontrei a sua inscrição. Quer tentar de novo? Nos informa apenas o **e-mail** usado no cadastro.
 --
-**es**: Uhum, no encontré tu inscripción. Podrías intentarlo de nuevo? Ponga el **correo** usado en la inscripción o el **número de la inscripción**
-"""
-
-auth_order_not_found = """
-(pt-br)
-Uhmm, não encontrei a sua inscrição. Quer tentar de novo? Nos informa apenas o **e-mail** usado no cadastro ou o **número de registro**.
-De qualquer forma, vou marcar a {role} para ajudar.
-
---
-(es)
-Uhum, no encontré tu inscripción. Podrías intentarlo de nuevo? Ponga el **correo** usado en la inscripción o el **número de la inscripción**
-"""
-
-auth_user_not_found = """
-(pt-br)
-Eita, não encontrei uma pessoa com id **{id}** no Discord.
-Marcando a @organização para ajudar.
-
---
-(es)
-Ops, no encontré una persona con el id **{id}** en el Discord.
-Llamo la @organização para ayudarte.
+**es**: Uhum, no encontré tu inscripción. Podrías intentarlo de nuevo? Ponga el **correo** usado en la inscripción.
 """
 
 schedule_message_header = """
-:exclamation::exclamation::exclamation::clock1: **Veja o que vai vai rolar na Programação da Python Brasil ainda hoje** :clock1::exclamation::exclamation::exclamation:
+:exclamation::exclamation::exclamation::clock1: **Veja o que vai vai rolar na Scipy Latin America Conference 2021 ainda hoje** :clock1::exclamation::exclamation::exclamation:
 """
 
 schedule_message = """{type} - {hour} {discord} {youtube}
         - {title} - {author}
 """
 
-schedule_message_footer = """:calendar: Perdeu algo ? Tá tudo aqui: https://2021.pythonbrasil.org.br/grade
-"""
-
-buteco = """
-:beer::beer::beer: Alou !!!
-Passando para lembrar que temos nosso Buteco
-Lá é possível criar salas de áudio para conversar e ouvir um som !!
-Basta ir ao <#859515528329953290> para criar uma sala de audio !
-No <#896527406037336075> você pode pedir para uns dos nosso 3 bots tocar algumas músicas para vocês,
-Ou só chamar quem quiser para quela conversa de corredor de evento (ou de bar pós-evento !!)
-Não se esqueça de algumas dicas e regras:
-    *  Apenas 25 pessoas podem usar canais com cameras ou trasmissão de tela
-    *  Cuidado para isso não limitar o acesso a sua sala
-    *  Lembre-se de respeitar todas as pessoas que estiverem na sala
-    *  Somos um eventos com pessoas diversas, respeite a diversidade de cada um.
-    *  Recomendamos que ter seu nome de usuário e foto para que as pessoas possam saber como se referir a você.
-:warning:Lembre-se, TODOS os canais devem seguir o nosso CDC https://python.org.br/cdc/
-:beer::beer::beer: E Divirtam-se :beer::beer::beer:
+schedule_message_footer = """:calendar: Perdeu algo ? Tá tudo aqui: https://conf.scipy.lat/grade-programacao/
 """
 
 hello = """:wave: :wave_tone2: :wave_tone3: :wave_tone4: Olá pessoas! | ¡Hola gente!  :wave: :wave_tone2: :wave_tone3: :wave_tone4:
-Que prazer é ter vocês aqui na nossa #PyBr2021
-Qué placer es tenerte aquí en nuestro # PyBr2021
+Que prazer é ter vocês aqui na nossa #ScipyLat2021
+Qué placer es tenerte aquí en nuestro #ScipyLat2021
 
-Para acessar a grade do evento o link é https://2021.pythonbrasil.org.br/grade
-Para acceder a la cuadrícula del evento, el enlace es  https://2021.pythonbrasil.org.br/grade
+Para acessar a programação do evento / Para acceder al programa del evento => https://conf.scipy.lat/grade-programacao/
 
-Cada trilha possui um canal aqui para perguntas e discussões. São eles:
- Cada track tiene un canal para preguntas y discusiones:
-<#893958312985493584>  - Shirley Ann Jackson - Iniciante | Principiante
-<#893958335383089223> - Salmon Pink - Intermediário | Intermedio
-<#893958356484620378>  - Mellow Apricot - Avançado | Avanzado
-<#893958446909640734> - Little Boy Blue - Não técnicas |  No técnico
-<#893958471173689384>  - Bonie Prado - Espanhol | Español
-<#895487732443389983> - Perguntas para Mesas e Keynotes | Preguntas para tablas y Keynotes
+Teremos 3 "salas" onde serão apresentadas as palestras. Cada uma possui seu próprio canal para perguntas e discussões.
+Contaremos con 3 "salas" donde se presentarán las charlas. Cada uno tiene su propio canal para preguntas y discusiones.
+
+São elas / Son ellas:
+
+<#917742783178084424> - Ciranda
+<#917742798709612545> - Frevo
+<#917742811690967060> - Manguebeat
+<#895487732443389983> - Perguntas para Keynotes | Preguntas para Keynotes
 <#897130854181138503> - Assuntos aleatórios | Sujetos aleatorios
 
 Os links enviados durante as transmissões em cada trilha estará no canal da trilha.
-Lembrem-se que todo evento está sob o Código de Conduta. E caso você precise entrar em contato com o CoC marque @Código de Conduta
+Lembrem-se que todo evento está sob o Código de Conduta. E caso você precise entrar em contato com os voluntários que cuidam dessa parte, marque @cdc.
 
 Los enlaces enviados durante las transmisiones en cada pista estarán en el canal del track.
-Recuerde que todos los eventos están sujetos al Código de Conducta. Y si necesita ponerse en contacto con el CoC, consulte @root - Código de Conduta
+Recuerde que todos los eventos están sujetos al Código de Conducta. Y si necesita ponerse en contacto con los voluntarios que se encargan de esta parte, cheque @cdc
 
-Se você precisa falar com a organização, marque @Organização.
-Lembrem-se de evitar o flood e boa Python Brasil para todos nós!
+Se você precisa falar com a organização, marque @organizadores.
+Lembrem-se de evitar o flood e boa #ScipyLat2021 para todos nós!
 
-Si necesita hablar con la organización, consulte @Organização .
-¡Recuerda evitar hacer flood y les deseamos una buena Python Brazil para todas las personas!
-
+Si necesita hablar con la organización, consulte @organizadores.
+¡Recuerda evitar hacer flood y les deseamos una buena #ScipyLat2021 para todas las personas!
 """

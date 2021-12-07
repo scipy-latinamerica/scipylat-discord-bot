@@ -41,7 +41,7 @@ async def spreadsheet_participantes():
 class InviteTracker:
 
     ROLE_INVITE_MAP = [
-        ("palestrantes", ["7kBSy9cz"]),
+        ("palestrantes", ["UxZkXbDU"]),
         ("voluntarios", ["QCcz5QFc"]),
     ]
 
