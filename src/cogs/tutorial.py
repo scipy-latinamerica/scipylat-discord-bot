@@ -36,18 +36,22 @@ async def logchannel(bot, message):
     await channel.send(message)
 
 CALENDAR_URL = config("CALENDAR_URL")
-CALENDER_TIMEZONE= config('CALENDER_TIMEZONE','UTC')
-DISPPLAY_TIMEZONE= config('DISPPLAY_TIMEZONE','UTC')
+CALENDER_TIMEZONE = config('CALENDER_TIMEZONE', 'UTC')
+DISPPLAY_TIMEZONE = config('DISPPLAY_TIMEZONE', 'UTC')
 
-SPRINTS_CATEGORIES= config('SPRINTS_CATEGORIES','SPRINTS')
+SPRINTS_CATEGORIES = config('SPRINTS_CATEGORIES', 'SPRINTS')
 
 
 MSG="""Tutorial {channel}"""
 
-TUTORIAIS = [{'id': None, 'start': datetime.datetime(2021, 10, 16, 13, 0, tzinfo="UTC"), 'timezone': 'America/Sao_Paulo', 'location': 'Tutorial', 'title': 'Viajando por uma API protegida: Implementando uma API com Flask', 'author': 'Jessica Temporal', 'discord_channel': '', 'type': 'tutorial', 'youtube_channel': '', 'seats_limits': 10}, {'id': None, 'start': datetime.datetime(2021, 10, 17, 18, 0, tzinfo="UTC"), 'timezone': 'America/Sao_Paulo', 'location': 'Tutorial', 'title': 'Python Geoespacial: automatizando processos de GIS e Sensoriamento Remoto com pacotes abertos em python', 'author': 'Guilherme Iablonovski', 'discord_channel': '', 'type': 'tutorial', 'youtube_channel': '', 'seats_limits': 10}]
+TUTORIAIS = [
+    {'id': None, 'start': datetime.datetime(2021, 10, 16, 13, 0, tzinfo="UTC"), 'timezone': 'America/Sao_Paulo', 'location': 'Tutorial', 'title': 'Viajando por uma API protegida: Implementando uma API com Flask', 'author': 'Jessica Temporal', 'discord_channel': '', 'type': 'tutorial', 'youtube_channel': '', 'seats_limits': 10},
+    {'id': None, 'start': datetime.datetime(2021, 10, 17, 18, 0, tzinfo="UTC"), 'timezone': 'America/Sao_Paulo', 'location': 'Tutorial', 'title': 'Python Geoespacial: automatizando processos de GIS e Sensoriamento Remoto com pacotes abertos em python', 'author': 'Guilherme Iablonovski', 'discord_channel': '', 'type': 'tutorial', 'youtube_channel': '', 'seats_limits': 10}
+]
+
 
 class Tutorial(commands.Cog):
-    TUTORIALS_FILE_CONTROL = config("TUTORIALS_FILE_CONTROL",'./files/tutorial.json')
+    TUTORIALS_FILE_CONTROL = config("TUTORIALS_FILE_CONTROL", './files/tutorial.json')
     #TUTORIALS_FILE_PATH = config("TUTORIALS_FILE_PATHS",'./files')
 
     #TO DO SPRINT AND TUTORIALS ROLES
@@ -103,8 +107,8 @@ class Tutorial(commands.Cog):
                     return await self.http_get_json(semaphore, client, url, retry - 1)
                 logger.exception("Erro")
             
-    async def parse_events(self,response):
-        events=[]
+    async def parse_events(self, response):
+        events = []
         for item in response.get("items"):
             if item.get('extendedProperties').get('private').get('type') in self.alerts_type:
                 events.append(
@@ -328,7 +332,7 @@ class Tutorial(commands.Cog):
             return
         if not self.check_messages:
             return
-        for index,tutorial in enumerate(self._tutoriais):
+        for index, tutorial in enumerate(self._tutoriais):
             channel = self._bot.get_channel(tutorial["channel"])
             # if channel is None:
             #     continue

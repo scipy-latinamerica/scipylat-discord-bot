@@ -13,7 +13,7 @@ $ poetry run python bot.py
 
 - `scibot!config info`: - Retorna informações do canal
 - `scibot!config roles`: - Cria as roles descritas em src/roles.py
-- `scibot!config canais`: - Cria os canaos descritos em src/channels.py
+- `scibot!config canais`: - Cria os canais descritos em src/channels.py
 - `scibot!config reset-roles`: - Deleta roles criadas pelo bot.
 - `scibot!config reset-canais`: - Deleta canais criadas pelo bot.
 

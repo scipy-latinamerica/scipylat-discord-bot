@@ -21,6 +21,7 @@ class Role:
 
 ROLES = [
     Role(name="organizadores", permissions=organizers_permissions, position=80, colour=Colour.purple()),
+    Role(name="palestrantes", position=70, colour=Colour.orange()),
     Role(name="voluntarios", position=70, colour=Colour.magenta()),
     Role(name="cdc", position=60, colour=Colour.blue()),
     Role(name="participantes", position=50, colour=Colour.gold()),
@@ -29,8 +30,10 @@ ROLES = [
 
 everyone_except_organizers = [role for role in ROLES if role.name not in ['organizadores']]
 organizers = [role for role in ROLES if role.name in ['organizadores']]
-organizers_and_volunteers = [role for role in ROLES if role.name in ['organizadores', 'voluntarios', 'cdc']]
+organizers_and_volunteers = [role for role in ROLES if role.name in ['organizadores', 'palestrantes', 'voluntarios', 'cdc']]
 everyone_except_membros = [role for role in ROLES if role.name not in ['membros', ]]
+
+# !important!: remember to reset the permissions of role @everyone
 
 
 @dataclass
@@ -67,7 +70,8 @@ CHANNELS = [
     ),
     Channel(
         name="credenciamento",
-        read_and_write_roles=[role for role in ROLES]
+        read_only_roles=everyone_except_organizers,
+        read_and_write_roles=organizers
     ),
 
     Channel(
@@ -79,6 +83,13 @@ CHANNELS = [
     ),
     Channel(
         name="dev",
+        category="ORGANIZADORES",
+        position=1,
+        restrict_access=True,
+        read_and_write_roles=organizers
+    ),
+    Channel(
+        name="log",
         category="ORGANIZADORES",
         position=1,
         restrict_access=True,
@@ -121,12 +132,19 @@ CHANNELS = [
         read_and_write_roles=organizers_and_volunteers
     ),
     Channel(
+        name="palestrantes-ponentes",
+        category="VOLUNTARIOS",
+        position=2,
+        restrict_access=True,
+        read_and_write_roles=organizers_and_volunteers
+    ),
+    Channel(
         name="meeting-voluntarios",
         category="VOLUNTARIOS",
         position=2,
         restrict_access=True,
         voice=True,
-        read_and_write_roles=everyone_except_membros
+        read_and_write_roles=organizers_and_volunteers
     ),
     Channel(
         name="jobs-fair",
@@ -151,14 +169,21 @@ CHANNELS = [
         read_and_write_roles=everyone_except_membros
     ),
     Channel(
-        name="track-ciranda",
+        name="sala-ciranda",
         category="SCIPY LATIN AMERICA CONFERENCE",
         position=4,
         restrict_access=True,
         read_and_write_roles=everyone_except_membros
     ),
     Channel(
-        name="track-frevo",
+        name="sala-frevo",
+        category="SCIPY LATIN AMERICA CONFERENCE",
+        position=4,
+        restrict_access=True,
+        read_and_write_roles=everyone_except_membros
+    ),
+    Channel(
+        name="sala-manguebeat",
         category="SCIPY LATIN AMERICA CONFERENCE",
         position=4,
         restrict_access=True,
@@ -177,33 +202,7 @@ CHANNELS = [
         position=4,
         restrict_access=True,
         read_and_write_roles=everyone_except_membros
-    ),
-    Channel(
-        name="traducoes-simultaneas-pt",
-        category="VOLUNTARIOS",
-        position=4,
-        restrict_access=True,
-        voice=True,
-        read_and_write_roles=everyone_except_membros
-    ),
-    Channel(
-        name="traducoes-simultaneas-es",
-        category="VOLUNTARIOS",
-        position=4,
-        restrict_access=True,
-        voice=True,
-        read_and_write_roles=everyone_except_membros
-    ),
-
-    # SCIPY.LAT
-    # - todos
-    # - argentina
-    # - brasil
-    # - bolivia
-    # - chile
-    # - colombia
-    # - solicite-sua-embaixada
-
+    )
 ]
 
 
@@ -304,7 +303,6 @@ async def get_or_create_channel(
         overwrite.send_messages = False
         overwrite.read_messages = True
         await channel.set_permissions(role, overwrite=overwrite)
-        print(f'{role} - only read')
 
     for role in read_and_write_roles:
         role = discord.utils.get(existing_roles, name=role.name)
@@ -313,6 +311,5 @@ async def get_or_create_channel(
         overwrite.read_messages = True
         overwrite.read_message_history = True
         await channel.set_permissions(role, overwrite=overwrite)
-        print(f'{role} - read and write')
 
     return channel

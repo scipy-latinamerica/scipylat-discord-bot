@@ -2,7 +2,6 @@
 
 import asyncio
 import discord
-import logging
 import sentry_sdk
 import sys
 from decouple import config
@@ -10,19 +9,8 @@ from discord.ext import commands
 from src.conference import ROLES, CHANNELS, create_channel, get_or_create_role, roles_msg
 from src.icons import icon_check, icon_1, icon_2, icon_3, icon_time
 from src.helpers import get_destination
-
-logger = logging.getLogger('discord')
-log_level = logging.INFO
-logger.setLevel(log_level)
-log_formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s')
-terminal_handler = logging.StreamHandler()
-file_handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-terminal_handler.setLevel(log_level)
-file_handler.setLevel(log_level)
-terminal_handler.setFormatter(log_formatter)
-file_handler.setFormatter(log_formatter)
-logger.addHandler(terminal_handler)
-logger.addHandler(file_handler)
+from src.bot_logging import logger
+from src.cogs import Reminders, Greetings
 
 
 DISCORD_TOKEN = config("DISCORD_TOKEN")
@@ -33,9 +21,8 @@ if SENTRY_TOKEN:
 
 bot = commands.Bot(command_prefix="scibot!", intents=discord.Intents.all())
 
-# bot.add_cog(cogs.Reminders(bot))
-# bot.add_cog(cogs.Greetings(bot))
-# bot.add_cog(cogs.Greetings2(bot))
+bot.add_cog(Greetings(bot))
+# bot.add_cog(Reminders(bot))
 # bot.add_cog(cogs.Schedules(bot))
 
 
@@ -181,8 +168,8 @@ async def reset_roles(ctx: commands.Context):
 
 @bot.event
 async def on_ready():
-    print('Show is starting!')
-    print('We have logged in as {0.user}'.format(bot))
+    logger.info("Show is starting!")
+    logger.info("We have logged in as {0.user}".format(bot))
 
 
 if __name__ == '__main__':
