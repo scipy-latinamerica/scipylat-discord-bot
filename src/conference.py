@@ -69,7 +69,7 @@ CHANNELS = [
         read_and_write_roles=organizers
     ),
     Channel(
-        name="credenciamento",
+        name="credenciamento-registro",
         read_only_roles=everyone_except_organizers,
         read_and_write_roles=organizers
     ),
@@ -102,14 +102,6 @@ CHANNELS = [
         restrict_access=True, voice=True,
         read_and_write_roles=organizers
     ),
-
-    Channel(
-        name="perguntas",
-        category="VOLUNTARIOS",
-        position=2,
-        restrict_access=True,
-        read_and_write_roles=organizers_and_volunteers
-    ),
     Channel(
         name="voluntarios-es",
         category="VOLUNTARIOS",
@@ -119,13 +111,6 @@ CHANNELS = [
     ),
     Channel(
         name="voluntarios-pt",
-        category="VOLUNTARIOS",
-        position=2,
-        restrict_access=True,
-        read_and_write_roles=organizers_and_volunteers
-    ),
-    Channel(
-        name="report",
         category="VOLUNTARIOS",
         position=2,
         restrict_access=True,
@@ -184,6 +169,13 @@ CHANNELS = [
     ),
     Channel(
         name="sala-manguebeat",
+        category="SCIPY LATIN AMERICA CONFERENCE",
+        position=4,
+        restrict_access=True,
+        read_and_write_roles=everyone_except_membros
+    ),
+    Channel(
+        name="relampago",
         category="SCIPY LATIN AMERICA CONFERENCE",
         position=4,
         restrict_access=True,

@@ -10,10 +10,9 @@ from src.msgs.common import (
     auth_instructions,
     auth_already_confirmed,
     auth_email_not_found,
-    auth_welcome,
 )
 
-from .helpers import only_log_exceptions, logchannel, http_get_json
+from .helpers import only_log_exceptions, logchannel
 
 DISCORD_GUILD_ID = config("DISCORD_GUILD_ID")
 DISCORD_AUTH_CHANNEL_ID = config("DISCORD_AUTH_CHANNEL_ID")
