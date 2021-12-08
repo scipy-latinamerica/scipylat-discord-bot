@@ -1,8 +1,10 @@
 auth_welcome = """
 **📝 Credenciamento da Scipy Latin America Conference 2021 📝**
 
-(pt-br) Clique no emoji abaixo para ativar o bot e confirmar a sua inscrição. O nosso bot vai te mandar uma mensagem no privado. Basta seguir suas instruções por lá.
-(es) Haga clic en el EMOJI a continuación para activar el bot y confirme su solicitud. Nuestro bot le enviará un mensaje en el privado. Simplemente siga sus instrucciones allí.
+(pt-br) Clique no Emoji (:thumbsup:) abaixo para ativar o bot e confirmar a sua inscrição. O nosso bot vai te mandar uma mensagem no privado. Basta seguir suas instruções por lá.
+Se acabou de finalizar seu cadastro aguarde alguns minutos até ele ser computado.
+
+(es) Haga clic en el Emoji (:thumbsup:) a continuación para activar el bot y confirme su solicitud. Nuestro bot le enviará un mensaje en el privado. Simplemente siga sus instrucciones allí.
 """
 
 auth_instructions = """Olá! Hola!
