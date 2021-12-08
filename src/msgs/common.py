@@ -82,6 +82,8 @@ boas_vindas = """
 
 Estamos muito felizes em recebê-los! É a primeira vez que a Scipy Latin America realiza sua conferência de maneira completamente remota!
 
+Caso você ainda não tenha se inscrito, registre-se em <https://conf.scipy.lat/forms/formulario-participante/> antes de acessar o canal de credenciamento <#917963287650529350>.
+
 Pedimos a todas as pessoas do nosso servidor Discord que coloquem uma foto e seus pronomes no seu perfil de usuário, para sabermos como nos dirigir a vocês.
 
 Teremos 3 "salas" onde serão apresentadas as palestras. Cada uma possui seu próprio canal para perguntas e discussões.
@@ -91,9 +93,9 @@ Teremos 3 "salas" onde serão apresentadas as palestras. Cada uma possui seu pr�
 <#917962814105206794> - Sala Manguebeat
 <#917962584903270420> - Perguntas para Keynotes
 <#917962828319686677> - Palestra Relampagos
-<#917962854383104000> - Assuntos aleatórios
+<#917962841271730196> - Assuntos aleatórios
 
-As palestras relâmpago são palestras de 5 minutos de duração e podem ser sobre QUALQUER tema (desde que não fira o nosso Código de Conduta (https://conf.scipy.lat/cdc)).
+As palestras relâmpago são palestras de 5 minutos de duração e podem ser sobre QUALQUER tema (desde que não fira o nosso Código de Conduta - https://conf.scipy.lat/cdc).
 Para se inscrever, vá no canal #relampago; as inscrições iniciam às 15:00.
 
 No domingo haverão diversos tutoriais.
@@ -109,6 +111,8 @@ bienvenidas = """
 
 ¡Estamos muy contentos de darle la bienvenida! ¡Es la primera vez que Scipy Latin America realiza su conferencia de forma completamente remota!
 
+Si aún no te has registrado, hagalo en <https://conf.scipy.lat/forms/formulario-participante/> antes de accesar al canal de registro <#917963287650529350>.
+
 Pedimos que tolas las personas en nuestro servidor Discord que pongan una foto y sus pronombres en su perfil de usuario, para que sepamos cómo dirigirnos a usted.
 
 Contaremos con 3 "salas" donde se presentarán las conferencias. Cada uno tiene su propio canal para preguntas y discusiones.
@@ -120,7 +124,7 @@ Contaremos con 3 "salas" donde se presentarán las conferencias. Cada uno tiene 
 <#917962828319686677> - Charlas relámpago
 <#917962854383104000> - Asuntos aleatorios
 
-¡Las charlas relámpago son charlas de 5 minutos y pueden ser sobre CUALQUIER tema (siempre que no viole nuestro Código de Conducta (https://conf.scipy.lat/es/cdc)).
+¡Las charlas relámpago son charlas de 5 minutos y pueden ser sobre CUALQUIER tema (siempre que no viole nuestro Código de Conducta - https://conf.scipy.lat/es/cdc).
 Para suscribirte, dirígete al canal #relampago; el registro comienza a las 15:00h.
 
 
